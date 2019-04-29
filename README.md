@@ -40,6 +40,6 @@ python symcheck.py  -maew -r ./NCBI_RefSeq_hg19_UCSC.tsv -n ./HGNC_results.tsv -
 
 # LICENSE #
 
-**targetsqc is offered under the MIT License.**  
+**symcheck is offered under the MIT License.**  
 **Please read it here: https://opensource.org/licenses/MIT**  
 
