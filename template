@@ -1,11 +1,9 @@
 <HTML>
-<style>
-div {{
-  padding-right: 3px;
-  padding-left: 3px;
-}}
-</style>
+<head>
+<title>symcheck output</title>
+</head>
 
+<body>
 <!-- Made with: https://html-online.com/editor/ -->
 <p>This script is offered as-is, without warranty of any kind, following the <a href="https://opensource.org/licenses/MIT">MIT license</a>.</p>
 Please take a moment to review the settings below.</p>
@@ -13,14 +11,14 @@ Please take a moment to review the settings below.</p>
 You have used the RefSeq database file: {refseq}<br />You have used the HGNC database file: {hgnc}<br />You have provided a list of {genesno} gene symbols as a {genesfile}{repwarn}</p>
 <p><strong>OPTIONS</strong><br />
 You{ambopt} want a list of all ambiguous gene names (-a).<br />You have{mitopt} chosen to flag mitochondrial genes {mitexpl} (-m).<br />You have{weirdopt} chosen to flag genes from non-standard chromosomes{weirdexpl} (-w).<br />Finally, you{evopt} want info about every gene in your list (-e).</p>
-<p><strong>SUMMARY<br /></strong>
-Of the {unique} unique genes you provided:<br />
+<p><span style="text-decoration: underline;"><strong>SUMMARY</strong></span></p>
+<p>Of the {unique} unique genes you provided:<br />
 {rsfound} were found in the RefSeq database{rsmito}{rsweird}.<br />
 <b>{rsmissingno} were missing from RefSeq</b>, of which {ambmissingno} were mentioned as aliases of other genes.<br />
 Also, of the {rsmissingno} genes missing from RefSeq, {hgncmissingno} were also missing in HGNC, while {hgncfound} were present either legitimately or as a withdrawn entry {hgncmito}{hgncweird}.<br />
 {ambtext}<br />
 {weirdtext}</p>
-<p><strong>RESULTS<br /></strong>
+<p><span style="text-decoration: underline;"><strong>RESULTS</strong></span></p>
 <p>This is a review of all the symbols that were <strong>absent in the RefSeq database.</strong> Filtering by these names will likely not find anything.</p>
 <p>{absent_review}</p>
 <p>{ambiguous_review}</p>
@@ -30,6 +28,7 @@ Also, of the {rsmissingno} genes missing from RefSeq, {hgncmissingno} were also 
 
 <!-- From: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_tooltip -->
 <!-- With escaped {{}} -->
+
 <style>
 .ltooltip {{
   position: relative;
@@ -107,7 +106,14 @@ Also, of the {rsmissingno} genes missing from RefSeq, {hgncmissingno} were also 
 .rtooltip:hover .tooltiptext {{
   visibility: visible;
   opacity: 1;
-}}
-</style>
 
+}}
+
+div {{
+  padding-right: 3px;
+  padding-left: 3px;
+}}
+
+</style>
+<body>
 </HTML>
