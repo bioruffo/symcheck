@@ -57,8 +57,10 @@ def getinfo(linedata, info, columns, integer=False):
 
 def load_genes_from_file(filename):
     with open(filename, 'r', encoding='utf8') as f:
-        data = [f.read().strip()]
-    return separate(data, ['\n', '\t', ' '])
+        data = f.read().strip()
+    data = data.split('\n')
+    data = [x for x in data if not x.strip().startswith('#')]
+    return separate(data, ['\t', ' '])
         
 def load_genes_from_text(text):
     data = [text.strip()]
@@ -67,7 +69,7 @@ def load_genes_from_text(text):
 def separate(data, separators):
     for sep in separators:
         data = [y for x in data for y in x.split(sep)]
-    data = [x.strip() for x in data]
+    data = [x.strip() for x in data if x.strip() != '']
     return data
    
     
